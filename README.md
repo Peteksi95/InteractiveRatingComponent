@@ -1,0 +1,2 @@
+# InteractiveRatingComponent
+Frontend Mentor challenge

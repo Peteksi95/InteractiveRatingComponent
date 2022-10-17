@@ -1,0 +1,137 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    background-color: hsl(216, 12%, 8%);
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-image: linear-gradient(hsl(213, 18%, 22%), hsl(212, 20%, 13%));
+    max-width: 90%;
+    border-radius: 10px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#selected {
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(218, 9%, 25%);
+    border-radius: 20px;
+    padding: 0.5em 1em 0.5em 1em;
+    margin-top: 2.5em;
+    margin-bottom: 0;
+}
+
+img[src="images/illustration-thank-you.svg"] {
+    margin-top: 2.5em;
+}
+
+img[src="images/icon-star.svg"] {
+    width: 20px;
+}
+
+#thankyoutext {
+    margin: 0.75em 2em 2em 2em;
+}
+
+.star {
+    display: flex;
+    background-color: hsl(218, 9%, 25%);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 8% 8% 0 8%;
+}
+
+h1 {
+    color: hsl(0, 0%, 100%);
+    margin-left: 8%;
+    margin-bottom: 0;
+}
+
+p {
+    color: hsl(217, 12%, 63%);
+    margin: 4% 8% 8% 8%;
+    line-height: 1.5em;
+}
+
+#ratingbuttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1em;
+    margin: 1% auto 1% auto;
+}
+
+button {
+    color: hsl(217, 12%, 63%);
+    background-color: hsl(218, 9%, 25%);
+    border-radius: 50%;
+    border: none;
+    width: 45px;
+    height: 45px;
+    font-weight: 700;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: hsl(25, 97%, 53%);
+}
+
+button:visited {
+    color: hsl(217, 12%, 63%);
+}
+
+#submit {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(25, 97%, 53%);
+    width: 85%;
+    border-radius: 30px;
+    margin: 2em auto 2.5em auto;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: white;
+    color: hsl(25, 97%, 53%);
+}
+
+@media screen and (min-width: 376px) {
+    main {
+        min-width: 30%;
+    }
+
+    p {
+        font-size: 150%;
+    }
+
+    button {
+        width: 60px;
+        height: 60px;
+    }
+
+    #ratingbuttons {
+        gap: 1em;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    main {
+        max-width: 20%;
+    }
+}

@@ -68,7 +68,7 @@ p {
     line-height: 1.5em;
 }
 
-#ratingbuttons {
+#ratingbtns {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -76,23 +76,17 @@ p {
     margin: 1% auto 1% auto;
 }
 
-button {
-    color: hsl(217, 12%, 63%);
+button{
     background-color: hsl(218, 9%, 25%);
+    color: white;
     border-radius: 50%;
     border: none;
-    width: 45px;
-    height: 45px;
-    font-weight: 700;
+    font-size: 1.25em;
 }
 
 button:hover {
     cursor: pointer;
     background-color: hsl(25, 97%, 53%);
-}
-
-button:visited {
-    color: hsl(217, 12%, 63%);
 }
 
 #submit {
@@ -101,7 +95,6 @@ button:visited {
     width: 85%;
     border-radius: 30px;
     margin: 2em auto 2.5em auto;
-    font-weight: 700;
     letter-spacing: 0.3em;
 }
 

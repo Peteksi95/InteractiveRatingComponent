@@ -1,16 +1,27 @@
 window.onload = function() {
-    var submitBtn = document.getElementById("submit");
+
+    var btnValuesArr = [];
+    var removeLast = btnValuesArr.pop();
+
     // manage rating buttons and save the result based on which button is pressed
-        var buttonlist = document.querySelectorAll("button");
-        buttonlist.forEach(function(i){
+        var btnlist = document.querySelectorAll("button");
+        btnlist.forEach(function(i){
             i.addEventListener("click", function(e){
-                console.log((e.target.innerHTML));
+                e.target.style.backgroundColor = "#959eac";
+                if (btnValuesArr.length > 1) {
+                    removeLast; // make separate functions for push and color change?
+                } else {
+                    btnValuesArr.push(e.target.value);
+                }
             })
+            console.log(btnValuesArr);
         })
-    // change the "selected" text based on which button is pressed
-    function handleSubmitBtn() {
-        submitBtn.onclick = function() {
-            var selectedRating = rating.value;
-        };
-    };
-};
+    // change the page and "selected" text based on which button is pressed
+    var text = document.getElementById("selected");
+    var btnValue = document.getElementById("btn1");
+    var submitBtn = document.getElementById("submit");
+    submitBtn.onclick = function() {
+        location.href = "thankyou.html";
+        
+    }
+}

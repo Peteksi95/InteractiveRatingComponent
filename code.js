@@ -1,27 +1,22 @@
-window.onload = function() {
+const btnlist = document.querySelectorAll("[data-btn]")
+const submitBtn = document.getElementById("submit")
+const selectedText = document.getElementById("selected")
 
-    var btnValuesArr = [];
-    var removeLast = btnValuesArr.pop();
+btnlist.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+       let ratingValue = e.currentTarget.value 
+       btnlist.forEach(btn => btn.classList.remove("active"))
+       btn.classList.add("active")
+       sessionStorage.setItem("rating", ratingValue)
+       console.log(typeof ratingValue)
+       console.log(ratingValue)
+       console.log(sessionStorage)
+    })
+})
 
-    // manage rating buttons and save the result based on which button is pressed
-        var btnlist = document.querySelectorAll("button");
-        btnlist.forEach(function(i){
-            i.addEventListener("click", function(e){
-                e.target.style.backgroundColor = "#959eac";
-                if (btnValuesArr.length > 1) {
-                    removeLast; // make separate functions for push and color change?
-                } else {
-                    btnValuesArr.push(e.target.value);
-                }
-            })
-            console.log(btnValuesArr);
-        })
-    // change the page and "selected" text based on which button is pressed
-    var text = document.getElementById("selected");
-    var btnValue = document.getElementById("btn1");
-    var submitBtn = document.getElementById("submit");
-    submitBtn.onclick = function() {
-        location.href = "thankyou.html";
-        
-    }
+if (window.location.href.match("thankyou.html") != null) {
+    let ratingText = sessionStorage.getItem("rating")
+    selectedText.innerHTML = "You selected " + ratingText + " out of 5"
+    console.log(sessionStorage)
+    console.log(typeof ratingValue)
 }
